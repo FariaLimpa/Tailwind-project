@@ -11,12 +11,8 @@
   <body>
     <!-- Navbar -->
     <nav class="p-3 flex bg-white justify-between items-center">
-      <a href="#" id="brand" class="flex gap-2 items-center">
-        <img
-          class="object-cover max-w-12 max-h-12"
-          src="./assets/asset 0.png"
-          alt="Logo"
-        />
+      <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+        <img class="object-cover max-w-12 max-h-12" src="./assets/asset 0.png" alt="Logo"/>
         <span class="text-lg font-medium font-display">ToDesktop</span>
       </a>
       <div id="nav-menu" class="hidden md:flex gap-12">
@@ -26,106 +22,92 @@
         <a href="#" class="font-medium hover:text-primary">Blogs</a>
         <a href="#" class="font-medium hover:text-primary">Login</a>
       </div>
-      <button
-        class="hidden md:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"
-      >
-        <img src="./assets/asset 1.svg" alt="" />
-        <span>Electron Developers</span>
-        <svg
-          class="size-4"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 448 512"
-        >
-          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-          <path
-            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-          />
-        </svg>
-      </button>
+      <div class="hidden lg:flex flex-1 justify-end">
+        <button class="hidden md:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+          <img src="./assets/asset 1.svg" alt="" />
+          <span>Electron Developers</span>
+          <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+          </svg>
+        </button>
+      </div>
 
       <button class="p-2 md:hidden" onclick="handleMenu()">
         <!-- <i class="fa-solid fa-bars text-gray-600"></i> -->
-        <svg
-          class="size-4"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 448 512"
-        >
+        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-          <path
-            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-          />
+          <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
         </svg>
       </button>
 
-      <div
-        id="nav-dialog"
-        class="hidden fixed z-10 bg-white inset-0 p-3 md:hidden"
-      >
+      <div id="nav-dialog" class="hidden fixed z-10 bg-white inset-0 p-3 md:hidden">
         <div id="nav-bar" class="flex justify-between">
           <a href="#" id="brand" class="flex gap-2 items-center">
-            <img
-              class="object-cover max-w-12 max-h-12"
-              src="./assets/asset 0.png"
-              alt="Logo"
-            />
+            <img class="object-cover max-w-12 max-h-12" src="./assets/asset 0.png" alt="Logo"/>
             <span class="text-lg font-medium font-display">ToDesktop</span>
           </a>
           <button class="p-2 md:hidden" onclick="handleMenu()">
-            <svg
-              class="size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 384 512"
-            >
+            <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
               <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-              <path
-                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-              />
+              <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
             </svg>
           </button>
         </div>
         <div>
-          <a
-            href="#"
-            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
-            >Pricing</a
-          >
-          <a
-            href="#"
-            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
-            >Docs</a
-          >
-          <a
-            href="#"
-            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
-            >Changelog</a
-          >
-          <a
-            href="#"
-            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
-            >Blogs</a
-          >
-          <a
-            href="#"
-            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
-            >Login</a
-          >
+          <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Pricing</a>
+          <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Docs</a>
+          <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Changelog</a>
+          <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Blogs</a>
+          <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Login</a>
         </div>
         <div class="h-[1px] bg-gray-300"></div>
-        <button
-          class="mt-6 w-full flex gap-2 items-center border border-gray-400 px-6 py-4 rounded-lg hover:border-gray-50"
-        >
+        <button class="mt-6 w-full flex gap-2 items-center border border-gray-400 px-6 py-4 rounded-lg hover:border-gray-50">
           <img src="./assets/asset 1.svg" alt="" />
           <span>Electron Developers</span>
         </button>
       </div>
     </nav>
     <!-- Main section -->
-    <!-- <main> -->
-      <!-- Hero section -->
-      <div id="hero" class="min-h-screen bg-gradient-to-br from-purple-50 to-orange-50">
+    <main>
+    <!-- Hero section -->
+    <div id="hero" class="min-h-screen bg-gradient-to-b from-purple-50 to-orange-50">
+      <div id="hero-container" class="max-w-4xl mx-auto px-6 pt-6 pb-32 flex flex-col sm:items-center sm:text-center sm:pt-12">
+        <div id="version-text" class="flex items-center border border-yellow-300 
+        bg-yellow-50 rounded-lg px-3 py-1 w-fit my-6 gap-2 shadow-md hover:shadow-lg hover:translate-y-1 transition group">
+          <div class="w-2 h-2 bg-yellow-400 rounded-full border border-yellow-600"></div>
+          <p class="font-display font-medium text-yellow-600">v0.21.1: <span class="text-yellow-800">Find-in-page bug fixes</span></p>
+          <svg fill="#D68910" class="size-4 group-hover:translate-x-1 transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+          </svg>
+        </div>
+        <div id="hero-features" class="hidden sm:flex gap-8 my-6">
+          <div class="flex justify-center items-center gap-2 text-gray-500">
+            <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm97 289c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L79 303c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zM257 255c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"/></svg>
+            <p>Code Optinal</p>
+          </div>
+          <div class="flex justify-center items-center gap-2 text-gray-500">
+            <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M288 160c-35.3 0-64-26.9-64-60c0-24 33.7-70.1 52.2-93.5c6.1-7.7 17.5-7.7 23.6 0C318.3 29.9 352 76 352 100c0 33.1-28.7 60-64 60zM64 128H197.5c13.2 37.3 48.7 64 90.5 64s77.4-26.7 90.5-64H512c35.3 0 64 28.7 64 64V352H448c-17.7 0-32 14.3-32 32l0 128L64 512c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64zM448 512l0-128H576L448 512zM96 256a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+            <p>Drag & drop builder</p>
+          </div>
+          <div class="flex justify-center items-center gap-2 text-gray-500">
+            <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"/></svg>
+            <p>Windows, Mac, Linux</p>
+          </div>
+        </div>
+        <h1 class="text-4xl font-semibold leading-snug mt-4 sm:text-7xl">Web app to desktop app in minitues</h1>
+        <p class="text-xl mt-4 sm:text-2xl sm:mt-8 sm:leading-normal text-gray-800">Take your web app codebase and transform it into a cross platform desktop app with native functionality</p>
+        <div id="buttons-container" class="mt-12 flex flex-col gap-4 sm:flex-row">
+          <button class="px-8 py-3 font-semibold rounded-lg text-white  shadow-sm bg-blue-700">Downloads</button>
+          <button class="px-8 py-3 font-semibold rounded-lg bg-white border border-gray-400 hover:border-gray-800">Read Docs</button>
+        </div>
+      </div>
+      <div>
         
       </div>
-    <!-- </main> -->
+    </div>
+    </main>
   </body>
   <script src="script.js"></script>
 </html>
